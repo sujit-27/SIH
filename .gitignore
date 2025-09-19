@@ -1,0 +1,93 @@
+# =========================
+# React Frontend .gitignore
+# =========================
+
+# dependencies
+frontend/node_modules/
+frontend/.pnp
+frontend/.pnp.js
+
+# testing
+frontend/coverage/
+
+# production build
+frontend/build/
+
+# misc
+frontend/.DS_Store
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# log files
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/package-lock.json
+frontend/yarn.lock
+
+# =========================
+# Spring Boot Backend .gitignore
+# =========================
+
+# Maven
+backend/target/
+backend/pom.xml.tag
+backend/pom.xml.releaseBackup
+backend/pom.xml.versionsBackup
+backend/logs/
+backend/!.mvn/wrapper/maven-wrapper.jar
+
+# Gradle (if using)
+backend/.gradle
+backend/build/
+backend/gradle-app.setting
+
+# IDEs and editors
+*.iml
+.idea/
+.vscode/
+*.swp
+*.swo
+*.class
+*.project
+*.classpath
+*.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables and secrets
+backend/.env
+backend/.env.local
+backend/application-*.yml
+backend/application-*.properties
+
+# Logs
+*.log
+
+# =========================
+# Global Git Ignore
+# =========================
+# Ignore macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore secret files
+Frontend/.env
+backend/backend/src/main/resources/application.properties
