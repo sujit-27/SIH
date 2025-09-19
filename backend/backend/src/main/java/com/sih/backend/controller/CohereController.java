@@ -12,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "http://localhost:5173")
 public class CohereController {
 
     @Value("${cohere.api.key}")
@@ -35,7 +35,7 @@ public class CohereController {
             headers.set("Authorization", "Bearer " + cohereApiKey);
 
             Map<String, Object> requestBody = Map.of(
-                    "model", "command-r-plus",
+                    "model", "command-nightly",
                     "message", prompt,
                     "max_tokens", 1500,
                     "temperature", 0.7
