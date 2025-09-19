@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // src/components/RoadmapGenerator.jsx
->>>>>>> cd27e79f15a5b8eb00c023484bd314c6ccde3bb9
 import React, { useState } from "react";
 import RoadmapVisualization from "./RoadmapVisualization";
 import { generateRoadmapFromSummary, summarizeUserInput } from "../lib/huggingfaceService";
@@ -17,30 +14,6 @@ const RoadmapGenerator = () => {
       setError("Please enter your career goals or interests");
       return;
     }
-<<<<<<< HEAD
-    setIsLoading(true);
-    setError("");
-    try {
-      const summary = await summarizeUserInput(userInput);
-      const response = await generateRoadmapFromSummary(summary);
-
-      console.log("Backend response:", response);
-
-      if (response?.generated_text) {
-        try {
-          // Strip potential newline characters and parse
-          const parsedRoadmap = JSON.parse(response.generated_text.replace(/\n/g, ""));
-          console.log("Parsed roadmap:", parsedRoadmap);
-          setRoadmapData(parsedRoadmap);
-        } catch (parseError) {
-          console.error("Parsing error:", parseError);
-          setError("Failed to parse roadmap. Showing default roadmap.");
-          setRoadmapData(null);
-        }
-      } else {
-        setError("No roadmap received. Showing default roadmap.");
-        setRoadmapData(null);
-=======
 
     setIsLoading(true);
     setError("");
@@ -55,7 +28,6 @@ const RoadmapGenerator = () => {
       } else {
         setError("No roadmap received. Showing default roadmap.");
         setRoadmapData(roadmap);
->>>>>>> cd27e79f15a5b8eb00c023484bd314c6ccde3bb9
       }
     } catch (err) {
       console.error("Error generating roadmap:", err);
@@ -76,39 +48,6 @@ const RoadmapGenerator = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
       <div className="max-w-7xl mx-auto p-6 space-y-8">
         <div className="text-center py-8">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
-            Career Roadmap Generator
-          </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Describe your career goals, and we'll generate a personalized roadmap with stages and steps.
-          </p>
-        </div>
-
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 ">
-          <textarea
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="e.g., I want to become a Full Stack Java developer and work at Google..."
-            className="w-full p-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 resize-none"
-            rows={5}
-          />
-          {error && <div className="mt-3 text-red-600">{error}</div>}
-          <div className="flex gap-4 mt-6">
-            <button
-              onClick={handleGenerateRoadmap}
-              disabled={isLoading}
-              className="flex-1 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50"
-            >
-              {isLoading ? "Generating..." : "Generate Roadmap"}
-            </button>
-            {(roadmapData || userInput) && (
-              <button
-                onClick={clearRoadmap}
-                className="px-6 py-4 bg-gray-100 text-gray-700 rounded-xl hover:bg-gray-200"
-              >
-                Clear
-=======
           <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-4">
             🎯 Career Roadmap Generator
           </h1>
@@ -168,28 +107,19 @@ const RoadmapGenerator = () => {
                 className="px-6 py-4 bg-gray-100 text-gray-700 rounded-2xl hover:bg-gray-200 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-1"
               >
                 🗑️ Clear
->>>>>>> cd27e79f15a5b8eb00c023484bd314c6ccde3bb9
               </button>
             )}
           </div>
         </div>
 
-<<<<<<< HEAD
-        <RoadmapVisualization roadmap={roadmapData} />
-=======
         {roadmapData && (
           <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-4 backdrop-blur-sm bg-opacity-90">
             <RoadmapVisualization roadmap={roadmapData} />
           </div>
         )}
->>>>>>> cd27e79f15a5b8eb00c023484bd314c6ccde3bb9
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default RoadmapGenerator;
-=======
-export default RoadmapGenerator;
->>>>>>> cd27e79f15a5b8eb00c023484bd314c6ccde3bb9
