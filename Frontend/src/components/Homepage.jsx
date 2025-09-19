@@ -202,37 +202,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-slate-900">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-violet-500 rounded-lg flex items-center justify-center text-white font-bold">
-              CA
-            </div>
-            <div>
-              <h1 className="text-lg font-semibold">Career Advisor</h1>
-              <p className="text-xs text-slate-500">
-                One-Stop Personalized Career & Education Advisor
-              </p>
-            </div>
-          </div>
-          <nav className="flex items-center gap-4 text-sm text-slate-600">
-            <a className="hover:text-indigo-600" href="#features">
-              Features
-            </a>
-            <a className="hover:text-indigo-600" href="#search">
-              Find Schools
-            </a>
-            <Link className="hover:text-indigo-600" to="/quiz">
-              Career Test
-            </Link>
-            <button className="px-3 py-1 rounded-md bg-indigo-600 text-white text-sm">
-              Sign In
-            </button>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <main className="max-w-6xl mx-auto px-6 py-10">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
